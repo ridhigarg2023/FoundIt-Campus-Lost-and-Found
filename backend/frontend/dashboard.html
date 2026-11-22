@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | FoundIt</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">Found<span>It.</span></a><nav><a href="index.html">Home</a><a href="report.html">Report Item</a><button class="nav-text" id="logoutBtn">Logout</button></nav></header>
+<main class="page-wrap">
+  <div class="section-heading"><div><span class="eyebrow">YOUR ACCOUNT</span><h1>My Dashboard</h1><p class="muted" id="welcomeText"></p></div><a class="btn primary" href="report.html">+ New Report</a></div>
+  <section class="dashboard-panel"><h2>My item reports</h2><div id="myReports" class="item-grid"><div class="empty-state">Loading...</div></div></section>
+  <section class="dashboard-panel"><h2>My claim requests</h2><div class="table-wrap"><table><thead><tr><th>Item</th><th>Submitted</th><th>Status</th></tr></thead><tbody id="myClaims"><tr><td colspan="3">Loading...</td></tr></tbody></table></div></section>
+  <p class="form-message" id="formMessage"></p>
+</main>
+<script src="script.js"></script></body></html>

@@ -7,10 +7,10 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const cors = require("cors");
 const pool = require("./db");
-
+const FRONTEND = path.join(__dirname, "frontend");
 const app = express();
 const PORT = Number(process.env.PORT || 3000);
-const FRONTEND = path.join(__dirname, "..", "frontend");
+
 const UPLOADS = path.join(__dirname, "uploads");
 if (!fs.existsSync(UPLOADS)) fs.mkdirSync(UPLOADS, {recursive:true});
 
