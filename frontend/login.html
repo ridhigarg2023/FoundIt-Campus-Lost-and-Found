@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | FoundIt</title><link rel="stylesheet" href="style.css"></head>
+<body class="auth-page">
+<header class="navbar"><a class="logo" href="index.html">Found<span>It.</span></a><nav><a href="index.html">Home</a><a href="signup.html">Create account</a></nav></header>
+<main class="auth-wrap">
+  <form class="form-card auth-card" id="loginForm">
+    <span class="eyebrow">WELCOME BACK</span><h1>Sign in to FoundIt</h1>
+    <p class="muted">Use your account to report items and manage claims.</p>
+    <label>Email address<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+    <label>Password<input type="password" name="password" required autocomplete="current-password" minlength="6" placeholder="Enter your password"></label>
+    <button class="btn primary full" type="submit">Login</button>
+    <p class="form-message" id="formMessage" aria-live="polite"></p>
+    <p class="auth-switch">New to FoundIt? <a href="signup.html">Create an account</a></p>
+  </form>
+</main>
+<script src="script.js"></script></body></html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | FoundIt</title><link rel="stylesheet" href="style.css"></head>
+<body class="auth-page">
+<header class="navbar"><a class="logo" href="index.html">Found<span>It.</span></a><nav><a href="index.html">Home</a><a href="login.html">Login</a></nav></header>
+<main class="auth-wrap">
+  <form class="form-card auth-card" id="signupForm">
+    <span class="eyebrow">JOIN YOUR CAMPUS COMMUNITY</span><h1>Create an account</h1>
+    <p class="muted">Register with your student details to get started.</p>
+    <label>Full name<input type="text" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your full name"></label>
+    <label>College email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+    <label>Phone number<input type="tel" name="phone" maxlength="20" placeholder="Optional contact number"></label>
+    <label>Password<input type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label>
+    <button class="btn primary full" type="submit">Create Account</button>
+    <p class="form-message" id="formMessage" aria-live="polite"></p>
+    <p class="auth-switch">Already registered? <a href="login.html">Login</a></p>
+  </form>
+</main>
+<script src="script.js"></script></body></html>

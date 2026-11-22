@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Item | FoundIt</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">Found<span>It.</span></a><nav><a href="index.html">Home</a><a href="dashboard.html">My Dashboard</a><a href="login.html">Login</a></nav></header>
+<main class="page-wrap">
+  <div class="page-intro"><span class="eyebrow">HELP THE COMMUNITY</span><h1>Report an Item</h1><p class="muted">Share clear details so the right person can identify and recover the item.</p></div>
+  <form class="form-card report-form" id="reportForm">
+    <div class="form-grid">
+      <label>Report type
+        <select name="status" id="reportStatus" required><option value="lost">I lost an item</option><option value="found">I found an item</option></select>
+      </label>
+      <label>Item name<input name="title" required maxlength="100" placeholder="e.g. Black leather wallet"></label>
+      <label>Category
+        <select name="category" required>
+          <option value="">Select category</option><option>Electronics</option><option>Accessories</option><option>Documents</option><option>Clothing</option><option>Books</option><option>Other</option>
+        </select>
+      </label>
+      <label>Campus location<input name="location" required maxlength="150" placeholder="e.g. Central Library, Block A"></label>
+      <label>Date <input type="date" name="item_date" required></label>
+      <label>Contact phone <input type="tel" name="contact_phone" maxlength="20" placeholder="Optional"></label>
+      <label class="full-span">Description<textarea name="description" required minlength="10" maxlength="1200" rows="5" placeholder="Describe colour, brand, identifying marks, where it was last seen or found..."></textarea></label>
+      <label class="full-span">Item photo (optional, JPG/PNG/WEBP, max 5 MB)
+        <input type="file" id="itemImage" name="image" accept="image/png,image/jpeg,image/webp">
+      </label>
+    </div>
+    <img id="imagePreview" class="image-preview" alt="Selected item preview" hidden>
+    <p class="form-note">For safety, do not include passwords, bank details or highly sensitive personal information in the description.</p>
+    <button class="btn primary" type="submit">Submit Report</button>
+    <p class="form-message" id="formMessage" aria-live="polite"></p>
+  </form>
+</main>
+<script src="script.js"></script></body></html>

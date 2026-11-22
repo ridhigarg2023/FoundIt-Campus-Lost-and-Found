@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | FoundIt</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">Found<span>It.</span></a><nav><a href="index.html">Home</a><button class="nav-text" id="logoutBtn">Logout</button></nav></header>
+<main class="page-wrap">
+  <div class="page-intro"><span class="eyebrow">PORTAL MANAGEMENT</span><h1>Admin Dashboard</h1><p class="muted">Review claims and manage item reports.</p></div>
+  <section class="stats admin-stats"><div class="stat-card"><h2 id="adminTotal">—</h2><p>Total reports</p></div><div class="stat-card"><h2 id="adminClaims">—</h2><p>Pending claims</p></div><div class="stat-card"><h2 id="adminReturned">—</h2><p>Returned items</p></div></section>
+  <section class="dashboard-panel"><h2>Pending claim requests</h2><div class="table-wrap"><table><thead><tr><th>Item</th><th>Claimant</th><th>Proof / details</th><th>Action</th></tr></thead><tbody id="adminClaimsBody"><tr><td colspan="4">Loading...</td></tr></tbody></table></div></section>
+  <section class="dashboard-panel"><h2>All item reports</h2><div id="adminItems" class="item-grid"></div></section>
+</main>
+<script src="script.js"></script></body></html>

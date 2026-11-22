@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoundIt | Campus Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">Found<span>It.</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a><a href="#lost">Lost Items</a><a href="#found">Found Items</a>
+    <a href="report.html">Report Item</a><a href="login.html" id="loginLink">Login</a>
+    <a href="signup.html" class="nav-btn" id="signupLink">Sign Up</a>
+    <a href="dashboard.html" id="dashboardLink" hidden>My Dashboard</a>
+    <button class="nav-text" id="logoutBtn" hidden>Logout</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">YOUR CAMPUS RECOVERY HUB</span>
+      <h1>Lost Something?<br><span>Let's Find It.</span></h1>
+      <p>A smarter way to report, search and recover lost belongings across your campus.</p>
+      <div class="hero-actions">
+        <a href="report.html?type=lost" class="btn primary">Report Lost Item</a>
+        <a href="report.html?type=found" class="btn outline">Report Found Item</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Search wallet, ID card, earbuds, location...">
+      <select id="statusFilter" aria-label="Filter by status">
+        <option value="all">All items</option><option value="lost">Lost</option><option value="found">Found</option>
+      </select>
+      <button class="btn primary" id="searchBtn">Search</button>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Portal statistics">
+    <div class="stat-card"><h2 id="totalItems">—</h2><p>Active Reports</p></div>
+    <div class="stat-card"><h2 id="lostCount">—</h2><p>Lost Items</p></div>
+    <div class="stat-card"><h2 id="foundCount">—</h2><p>Found Items</p></div>
+    <div class="stat-card"><h2 id="returnedCount">—</h2><p>Returned Items</p></div>
+  </section>
+
+  <section class="items-section" id="lost">
+    <div class="section-heading">
+      <div><span class="eyebrow">CAMPUS LISTINGS</span><h2>Recently Reported Items</h2></div>
+      <a href="report.html" class="text-link">Create a report →</a>
+    </div>
+    <div class="filters" id="categoryFilters">
+      <button class="filter active" data-category="all">All</button>
+      <button class="filter" data-category="electronics">Electronics</button>
+      <button class="filter" data-category="accessories">Accessories</button>
+      <button class="filter" data-category="documents">Documents</button>
+      <button class="filter" data-category="clothing">Clothing</button>
+      <button class="filter" data-category="other">Other</button>
+    </div>
+    <p class="muted results-message" id="resultsMessage" aria-live="polite"></p>
+    <div class="item-grid" id="itemGrid">
+      <div class="empty-state">Loading reports...</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <span class="eyebrow">MAKE A DIFFERENCE</span>
+    <h2>Found something on campus?</h2>
+    <p>Your small effort can help someone recover something important.</p>
+    <a href="report.html?type=found" class="btn light">Report a Found Item</a>
+  </section>
+</main>
+
+<footer>
+  <a class="logo footer-logo" href="index.html">Found<span>It.</span></a>
+  <p>Connecting people with their lost belongings.</p>
+  <p class="copyright">© <span id="year"></span> FoundIt · Campus Lost & Found Portal</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
